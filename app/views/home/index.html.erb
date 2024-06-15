@@ -1,0 +1,9 @@
+<h3>My Tasks</h3>
+<p><%= link_to "All tasks", tasks_path %></p>
+<p>This is the only tool You will need to manage all your tasks.</p>
+<% if logged_in? %>
+  <p>Create new tasks now <%= link_to "click here", new_task_path %></p>
+  <p><%= button_to "Log Out", logout_path, method: :delete %></p>
+<% else %>
+  <p><%= link_to "Sign up now!", new_user_path %> or <%= link_to "Log in now!", login_path %>
+<% end %>

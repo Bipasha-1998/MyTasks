@@ -1,0 +1,6 @@
+<% @tasks.each do |t| %>
+  <p><%= t.title %></p>
+  <p><%= t.description %></p>
+  <p><%= t.status %></p>
+<% end %>
+<p>Create new tasks now <%= link_to "click here", new_task_path %></p>
