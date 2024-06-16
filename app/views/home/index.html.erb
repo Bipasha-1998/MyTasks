@@ -1,9 +1,27 @@
-<h3>My Tasks</h3>
-<p><%= link_to "All tasks", tasks_path %></p>
-<p>This is the only tool You will need to manage all your tasks.</p>
-<% if logged_in? %>
-  <p>Create new tasks now <%= link_to "click here", new_task_path %></p>
-  <p><%= button_to "Log Out", logout_path, method: :delete %></p>
-<% else %>
-  <p><%= link_to "Sign up now!", new_user_path %> or <%= link_to "Log in now!", login_path %>
-<% end %>
+<div class="container" id="home-container">
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to MyTasks !!!</h1>
+    <p class="lead">This is the only tool You will need to manage all your tasks.</p>
+    <% if logged_in? %>
+      <p class="lead">
+        <% if current_user.tasks.where.not(status: "Done").present? %>
+          <%= link_to "All tasks", tasks_path %>
+        <% else %>
+          <%= link_to "Completed", completed_tasks_path %>
+        <% end %>
+      </p>
+      <p class="lead">
+          <%= button_to 'Logout!', logout_path, class: 'btn btn-success btn-md', method: :delete %>
+      </p>
+    <% else %>
+      <p class="lead">
+          <%= link_to 'Sign up!', new_user_path, class: 'btn btn-success btn-lg' %>
+      </p>
+      <p>Already have an account?</p>
+      <p class="lead">
+          <%= link_to 'Login!', login_path, class: 'btn btn-success btn-md' %>
+      </p>
+      <hr/>
+    <% end %>
+  </div>
+</div>

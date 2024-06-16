@@ -1,24 +1,27 @@
-# README
+# Task Manager App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Task Management web application built with Ruby on Rails and PostgreSQL.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- User authentication
+- Create, update, delete, and view tasks
+- Task statuses: Backlog, In-progress, Done
+- Task deadlines with email reminders
 
-* System dependencies
+## Setup
 
-* Configuration
+1. Clone the repository
+2. Install dependencies: `bundle install`
+3. Create and migrate the database: `rails db:create db:migrate`
+4. Run the server: `rails server`
 
-* Database creation
+## Running Tests
 
-* Database initialization
+1. Install RSpec: `bundle install`
+2. Run tests: `rspec`
 
-* How to run the test suite
+## Additional Features
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Responsive UI
+- Google Calendar API integration (optional)
