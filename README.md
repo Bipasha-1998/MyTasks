@@ -24,6 +24,8 @@ Task Manager is a web application built using Ruby on Rails that allows users to
     Update the SMTP configuration in config/environments/development.rb:
       ``` ruby
         config.action_mailer.delivery_method = :smtp
+        config.action_mailer.perform_deliveries = true
+        config.action_mailer.raise_delivery_errors = true
         config.action_mailer.smtp_settings = {
           address: 'smtp.gmail.com',
           port: 587,
