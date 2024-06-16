@@ -22,7 +22,7 @@ set :environment, 'development'
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.hour do
+every 1.minute do
  rake "tasks:task_reminder"
 end
 
