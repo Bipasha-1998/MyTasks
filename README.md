@@ -22,16 +22,18 @@ Task Manager is a web application built using Ruby on Rails that allows users to
 
   4. Configure SMTP settings:
     Update the SMTP configuration in config/environments/development.rb:
-      config.action_mailer.delivery_method = :smtp
-      config.action_mailer.smtp_settings = {
-        address: 'smtp.gmail.com',
-        port: 587,
-        domain: 'example.com',
-        user_name: '<your-email>',
-        password: '<your-password>',
-        authentication: 'plain',
-        enable_starttls_auto: true
-      }
+      ``` ruby
+        config.action_mailer.delivery_method = :smtp
+        config.action_mailer.smtp_settings = {
+          address: 'smtp.gmail.com',
+          port: 587,
+          domain: 'example.com',
+          user_name: '<your-email>',
+          password: '<your-password>',
+          authentication: 'plain',
+          enable_starttls_auto: true
+        }
+      ```
 
   5. Start the server:
     `rails s`
